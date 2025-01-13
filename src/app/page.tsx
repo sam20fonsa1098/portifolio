@@ -45,7 +45,7 @@ export default async function Home() {
 
           </section>
         </div>
-        <Image src="images/me.jpeg" preview={false}/>
+        <Image src="images/me.jpeg" preview={false} alt="Samuel Fonseca"/>
       </section>
 
       <section className={styles.hardContainer}>
