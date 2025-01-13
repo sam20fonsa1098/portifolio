@@ -26,6 +26,14 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+      env:
+        MONGODB_URI: ${{ secrets.MONGODB_URI }}
+        CODEBASE_URL: ${{ variables.CODEBASE_URL }}
+        EMAIL: ${{ variables.EMAIL }}
+        LINKEDIN_URL: ${{ variables.LINKEDIN_URL }}
+        MONGODB_ABOUT_COLLECTION: ${{ variables.MONGODB_ABOUT_COLLECTION }}
+        MONGODB_DATABASE: ${{ variables.MONGODB_DATABASE }}
+        PHONE_NUMBER: ${{ variables.PHONE_NUMBER }}
     - run: npm install
     - run: npm run lint
     - run: npm run build
