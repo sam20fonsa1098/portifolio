@@ -19,6 +19,7 @@ jobs:
     steps:
     - name: Create .env file
       run: |
+        ls
         echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" >> .env
         echo "CODEBASE_URL=${{ vars.CODEBASE_URL }}" >> .env
         echo "EMAIL=${{ vars.EMAIL }}" >> .env
@@ -26,6 +27,8 @@ jobs:
         echo "MONGODB_ABOUT_COLLECTION=${{ vars.MONGODB_ABOUT_COLLECTION }}" >> .env
         echo "MONGODB_DATABASE=${{ vars.MONGODB_DATABASE }}" >> .env
         echo "PHONE_NUMBER=${{ vars.PHONE_NUMBER }}" >> .env
+        ls
+        cat .env
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
