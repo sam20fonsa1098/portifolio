@@ -1,0 +1,7 @@
+.navigation {
+    background: var(--background) !important;
+}
+
+.navigation li {
+    color: #FFFFFF !important;
+}

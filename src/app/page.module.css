@@ -1,0 +1,117 @@
+
+.homeContainer span {
+    color: var(--highlight);
+}
+
+.homeContainer section {
+    margin: 4rem 0;
+}
+
+.homeContainer p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.introContainer {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 2rem 10rem;
+}
+
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+
+    padding: 4rem 0;
+
+}
+
+.roleContainer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    width: 75%;
+}
+
+.roleContainer h2 {
+    margin: 2rem 0;
+}
+
+.roleContainer p {
+    margin: 2rem 0;
+}
+
+.introContainer img {
+    border-radius: 1000px;
+}
+
+.hardContainer, .softContainer, .contactContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    margin: 4rem;
+}
+
+
+.hardSkillContainer div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.hardSkillContainer h3 {
+    text-align: center;
+    margin: 1rem;
+
+    color: white;
+}
+
+.hardSkillContainer div div {
+    background-color: var(--highlight);
+    margin: 1rem;
+
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.softContainer div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.softSkillContainer {
+    background-color: var(--highlight);
+
+    width: 8rem;
+    height: 8rem;
+    margin: 1rem;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.contactContainer h2, .contactContainer p, .contactContainer a {
+    margin: 1rem 1rem;
+}
+
+.contactContainer a {
+    background: none;
+}
