@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import { Footer } from './index';
 
 const mappedLinks = {
-    [process.env.GITHUB_URL!]: true,
+    [process.env.CODEBASE_URL!]: true,
     [process.env.LINKEDIN_URL!]: true,
     [`mailto:${process.env.EMAIL!}`]: true,
     [`tel:${process.env.PHONE_NUMBER!}`]: true,
