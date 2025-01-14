@@ -32,6 +32,9 @@ jobs:
         echo "EMAIL=${{ vars.EMAIL }}" >> .env
         echo "LINKEDIN_URL=${{ vars.LINKEDIN_URL }}" >> .env
         echo "MONGODB_ABOUT_COLLECTION=${{ vars.MONGODB_ABOUT_COLLECTION }}" >> .env
+        echo "MONGODB_CERTIFICATIONS_COLLECTION=${{ vars.MONGODB_CERTIFICATIONS_COLLECTION }}" >> .env
+        echo "MONGODB_EXPERIENCES_COLLECTION=${{ vars.MONGODB_EXPERIENCES_COLLECTION }}" >> .env
+        echo "MONGODB_PUBLICATIONS_COLLECTION=${{ vars.MONGODB_PUBLICATIONS_COLLECTION }}" >> .env
         echo "MONGODB_DATABASE=${{ vars.MONGODB_DATABASE }}" >> .env
         echo "PHONE_NUMBER=${{ vars.PHONE_NUMBER }}" >> .env
     - run: npm run build
