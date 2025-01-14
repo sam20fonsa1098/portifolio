@@ -2,8 +2,8 @@ import styles from './page.module.css';
 
 import { unstable_cache } from 'next/cache';
 import { Image } from 'antd';
-import { getInfoAboutMe } from './about/services/aboutService';
-import { ContactMe } from './shared/components/contactMe';
+import { getInfoAboutMe } from '@modules/about/services/aboutService';
+import { ContactMe } from '@modules/shared/components/contactMe';
 
 const getCachedInfoAboutMe = unstable_cache(
   async () => {

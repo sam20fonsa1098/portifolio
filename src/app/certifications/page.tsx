@@ -1,6 +1,6 @@
 import { unstable_cache } from "next/cache";
-import { Certification } from './components/Certification';
-import { getCertifications } from '../certifications/service/certificationService';
+import { Certification } from '@modules/certifications/components/Certification';
+import { getCertifications } from '@modules/certifications/service/certificationService';
 import styles from './page.module.css';
 
 const getCachedCertifications = unstable_cache(

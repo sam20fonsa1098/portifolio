@@ -1,9 +1,10 @@
 
-import { client } from '../../shared/services/mongo';
+import { getClient } from '../../shared/services/mongo';
 import { ICertification } from '../interfaces';
 
 async function getCertifications() {
     console.log("Retrieving certification in mongodb atlas")
+    const client = getClient();
     try {
       await client.connect();
       const data =  await client.db(

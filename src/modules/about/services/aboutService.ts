@@ -1,9 +1,10 @@
 
-import { client } from '../../shared/services/mongo';
+import { getClient } from '../../shared/services/mongo';
 import { About } from '../interfaces';
 
 async function getInfoAboutMe() {
     console.log("Retrieving info about me in mongodb atlas")
+    const client = getClient();
     try {
       await client.connect();
       const data =  await client.db(

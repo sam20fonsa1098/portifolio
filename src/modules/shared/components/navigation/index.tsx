@@ -67,7 +67,7 @@ const items: MenuItem[] = [
   },
 ];
 
-export default function Navigation() {
+export function Navigation() {
   return (
     <Menu mode="horizontal" items={items} className={styles.navigation}/>
   );
