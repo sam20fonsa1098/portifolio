@@ -1,0 +1,12 @@
+.mainContainer {
+    margin: 10rem;
+}
+
+.mainContainer h1 {
+    margin: 4rem 0;
+}
+
+.mainContainer section {
+    display: flex;
+    flex-direction: row;
+}

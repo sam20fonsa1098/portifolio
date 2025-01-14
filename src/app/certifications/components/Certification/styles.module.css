@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center
+}
+
+.container div {
+    margin: 0 2rem;
+}
+
+.container a {
+    margin-top: 1rem;
+}
