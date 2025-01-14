@@ -27,7 +27,6 @@ jobs:
     - run: npm install
     - run: npm run lint
     - run: |
-        ls
         echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" >> .env
         echo "CODEBASE_URL=${{ vars.CODEBASE_URL }}" >> .env
         echo "EMAIL=${{ vars.EMAIL }}" >> .env
@@ -35,7 +34,5 @@ jobs:
         echo "MONGODB_ABOUT_COLLECTION=${{ vars.MONGODB_ABOUT_COLLECTION }}" >> .env
         echo "MONGODB_DATABASE=${{ vars.MONGODB_DATABASE }}" >> .env
         echo "PHONE_NUMBER=${{ vars.PHONE_NUMBER }}" >> .env
-        ls
-        cat .env
     - run: npm run build
     - run: npm run test
