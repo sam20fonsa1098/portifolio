@@ -13,7 +13,6 @@ const getCachedCertifications = unstable_cache(
 
 export default async function Certifications() {
     const certifications = await getCachedCertifications();
-    const now = new Date();
     const completedCertifications = certifications.filter(certification => certification.expireDate);
     const certificationToAchieve = certifications.filter(certification => !certification.expireDate);
 
