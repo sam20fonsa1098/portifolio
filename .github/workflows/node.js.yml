@@ -10,6 +10,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    environment: dev
 
     strategy:
       matrix:
@@ -17,24 +18,20 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Create .env file
-      run: |
-        ls
-        echo "MONGODB_URI=${{ secrets.MONGODB_URI }}" >> .env
-        echo "CODEBASE_URL=${{ vars.CODEBASE_URL }}" >> .env
-        echo "EMAIL=${{ vars.EMAIL }}" >> .env
-        echo "LINKEDIN_URL=${{ vars.LINKEDIN_URL }}" >> .env
-        echo "MONGODB_ABOUT_COLLECTION=${{ vars.MONGODB_ABOUT_COLLECTION }}" >> .env
-        echo "MONGODB_DATABASE=${{ vars.MONGODB_DATABASE }}" >> .env
-        echo "PHONE_NUMBER=${{ vars.PHONE_NUMBER }}" >> .env
-        ls
-        cat .env
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+      env:
+        MONGODB_URI: ${{ secrets.MONGODB_URI }}
+        CODEBASE_URL: ${{ variables.CODEBASE_URL }}
+        EMAIL: ${{ variables.EMAIL }}
+        LINKEDIN_URL: ${{ variables.LINKEDIN_URL }}
+        MONGODB_ABOUT_COLLECTION: ${{ variables.MONGODB_ABOUT_COLLECTION }}
+        MONGODB_DATABASE: ${{ variables.MONGODB_DATABASE }}
+        PHONE_NUMBER: ${{ variables.PHONE_NUMBER }}
     - run: npm install
     - run: npm run lint
     - run: npm run build
