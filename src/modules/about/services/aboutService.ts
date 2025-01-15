@@ -1,5 +1,5 @@
 
-import { getClient } from '../../shared/services/mongo';
+import { getClient } from '@modules/shared/services/mongo';
 import { About } from '../interfaces';
 
 async function getInfoAboutMe() {

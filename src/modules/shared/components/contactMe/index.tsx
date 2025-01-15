@@ -11,10 +11,10 @@ const ContactMe: React.FC<{children?: ReactNode}> = ({children}) => {
     return (
         <section>
             {children}
-            <Button type='primary' shape='circle' icon={<GithubOutlined/>} href={process.env.CODEBASE_URL} target="_blank"/>
-            <Button type='primary' shape='circle' icon={<LinkedinOutlined/>} href={process.env.LINKEDIN_URL} target="_blank"/>
-            <Button type='primary' shape='circle' icon={<MailOutlined/>} href={`mailto:${process.env.EMAIL}`}/>
-            <Button type='primary' shape='circle' icon={<PhoneOutlined/>} href={`tel:${process.env.PHONE_NUMBER}`}/>
+            <Button type='default' shape='circle' icon={<GithubOutlined/>} href={process.env.CODEBASE_URL} target="_blank"/>
+            <Button type='default' shape='circle' icon={<LinkedinOutlined/>} href={process.env.LINKEDIN_URL} target="_blank"/>
+            <Button type='default' shape='circle' icon={<MailOutlined/>} href={`mailto:${process.env.EMAIL}`}/>
+            <Button type='default' shape='circle' icon={<PhoneOutlined/>} href={`tel:${process.env.PHONE_NUMBER}`}/>
         </section>
     );
 }

@@ -1,0 +1,12 @@
+.container div {
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 1rem 0;
+}
+
+.container p {
+    text-align: justify;
+}

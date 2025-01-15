@@ -29,7 +29,9 @@ const Certification: React.FC<ICertification> = ({
                 <p>{issueDate ? "Issue by" : "Organization"}: {organization}</p>
                 {issueDate ? <p>Issue date: {`${(issueDate.getMonth() + 1).toString().padStart(2, '0')}/${issueDate.getFullYear()}`}</p> : null}
                 {expireDate ? <p>Expiration Date: {`${(expireDate.getMonth() + 1).toString().padStart(2, '0')}/${expireDate.getFullYear()}`}</p> : null}
-                {credentialUrl ? <Button shape="round" icon={<SafetyCertificateOutlined/>} href={credentialUrl} target="_blank"/> : null}
+                {credentialUrl ? <Button shape="round" icon={<SafetyCertificateOutlined/>} href={credentialUrl} target="_blank">
+                    Check my badge
+                </Button> : null}
             </div>
         </div>
     );

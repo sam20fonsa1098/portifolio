@@ -1,0 +1,11 @@
+.container {
+    margin: 10rem;
+
+    width: 50%;
+}
+
+.container p {
+    margin: 1rem 0;
+    
+    text-align: justify;
+}

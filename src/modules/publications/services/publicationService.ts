@@ -1,16 +1,16 @@
 
 import { getClient } from '@modules/shared/services/mongo';
-import { ICertification } from '../interfaces';
+import { IPublication } from '../interfaces';
 
-async function getCertifications() {
-    console.log("Retrieving certification in mongodb atlas")
+async function getPublications() {
+    console.log("Retrieving publications in mongodb atlas")
     const client = getClient();
     try {
       await client.connect();
       const data =  await client.db(
         process.env.MONGODB_DATABASE!
-      ).collection<ICertification>(
-        process.env.MONGODB_CERTIFICATIONS_COLLECTION!
+      ).collection<IPublication>(
+        process.env.MONGODB_PUBLICATIONS_COLLECTION!
       ).find({}).toArray();
       return data;
     } finally {
@@ -19,5 +19,5 @@ async function getCertifications() {
 }
 
 
-export { getCertifications }
+export { getPublications }
   
