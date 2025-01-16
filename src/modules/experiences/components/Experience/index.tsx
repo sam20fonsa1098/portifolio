@@ -4,6 +4,7 @@
 import { IExperience } from "@modules/experiences/interfaces";
 import { formatDate } from "@modules/shared/utils/date";
 import { useState } from "react";
+import { Image } from "antd";
 import { DiscussionModal } from "../discussionModal";
 import styles from './styles.module.css';
 
@@ -48,7 +49,21 @@ const Experience: React.FC<IExperience> = ({
             </div>
 
             <DiscussionModal modalOpen={modalOpen} setModalOpen={setModalOpen} title={achievements[index]}>
-                <p>{achievementDiscussion ? achievementDiscussion[index] : ''}</p>
+                <div className={styles.modalContentContainer}>
+                    {(achievementDiscussion &&  achievementDiscussion[index] ? achievementDiscussion[index] : []).map((discussion, discussionIndex) => {
+                        if (discussion.includes("/images/")) {
+                            const splitDiscussion = discussion.split("/images/");
+                            const alt = splitDiscussion[0];
+                            const imageFile = splitDiscussion[1]
+                            return (
+                                <Image key={discussionIndex} src={`images/${imageFile}`} preview={false} width={200} alt={alt}/>
+                            );
+                        }
+                        return (
+                            <p key={discussionIndex}>{discussion}</p>
+                        );
+                    })}
+                </div>
             </DiscussionModal>
         </div>
     );

@@ -14,7 +14,7 @@ const DiscussionModal: React.FC<IDiscussionModal> = ({
     children,
     modalOpen,
     setModalOpen,
-    title
+    title,
 }) => {
     return (
         <Modal

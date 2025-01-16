@@ -7,6 +7,6 @@ export interface IExperience {
     endDate?: Date;
     achievements: string[]
     achievementDiscussion?: {
-        [key: number]: string;
+        [key: number]: string[];
     }
 }
