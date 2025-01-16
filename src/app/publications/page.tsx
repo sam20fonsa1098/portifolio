@@ -27,7 +27,7 @@ export default async function Publications() {
 
             {publications.map(publication => {
                 return (
-                    <Publication key={publication.id} {...publication}/>
+                    <Publication key={publication._id} {...publication}/>
                 );
             })}
         </div>

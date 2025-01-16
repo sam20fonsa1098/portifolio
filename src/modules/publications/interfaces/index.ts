@@ -1,5 +1,5 @@
 export interface IPublication {
-    id: number;
+    _id: string;
     name: string;
     publicationDate: Date;
     publicationUrl: string;

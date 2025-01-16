@@ -1,5 +1,5 @@
 export interface ICertification {
-    id: number;
+    _id: string;
     name: string;
     organization: string;
     imageLink: string;

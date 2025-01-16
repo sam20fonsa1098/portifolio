@@ -21,6 +21,14 @@ const items: MenuItem[] = [
         Home
       </Link>
     ),
+  },{
+    key: 'experiences',
+    icon: <SolutionOutlined />,
+    label: (
+      <Link href="experiences">
+        Experiences
+      </Link>
+    ),
   },
   {
     key: 'certifications',
@@ -28,14 +36,6 @@ const items: MenuItem[] = [
     label: (
       <Link href="certifications">
         Certifications
-      </Link>
-    ),
-  },{
-    key: 'experiences',
-    icon: <SolutionOutlined />,
-    label: (
-      <Link href="experiences">
-        Experiences
       </Link>
     ),
   },

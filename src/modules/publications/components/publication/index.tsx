@@ -4,6 +4,7 @@ import {
 } from '@ant-design/icons';
 import styles from './styles.module.css';
 import { IPublication } from '@modules/publications/interfaces';
+import { formatDate } from '@modules/shared/utils/date';
 
 
 const Publication: React.FC<IPublication> = ({
@@ -13,13 +14,11 @@ const Publication: React.FC<IPublication> = ({
     publicationUrl,
     publisher
 }) => {
-    publicationDate = new Date(publicationDate);
-
     return (
         <div className={styles.container}>
             <div>
                 <h2><span>{name}</span></h2>
-                <p>{publisher} - {`${(publicationDate.getMonth() + 1).toString().padStart(2, '0')}/${publicationDate.getFullYear()}`}</p>
+                <p>{publisher} - {formatDate(publicationDate)}</p>
             </div>
             <p>{description}</p>
             <div>

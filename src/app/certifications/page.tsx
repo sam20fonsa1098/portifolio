@@ -9,7 +9,7 @@ const getCachedCertifications = unstable_cache(
     },
     ['certifications'],
     { revalidate: 60 * 60 * 24 * 30, tags: ['certifications'] }
-  )
+)
 
 export default async function Certifications() {
     const certifications = await getCachedCertifications();
@@ -22,7 +22,7 @@ export default async function Certifications() {
             <section>
                 {completedCertifications.map(certification => {
                     return (
-                        <Certification key={certification.id} {...certification}/>
+                        <Certification key={certification._id} {...certification}/>
                     );
                 })}
             </section>
@@ -30,7 +30,7 @@ export default async function Certifications() {
             <section>
                 {certificationToAchieve.map(certification => {
                     return (
-                        <Certification key={certification.id} {...certification}/>
+                        <Certification key={certification._id} {...certification}/>
                     );
                 })}
             </section>

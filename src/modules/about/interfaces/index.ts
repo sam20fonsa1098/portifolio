@@ -1,5 +1,5 @@
 export interface About {
-    id: number;
+    _id: string;
     name: string;
     summary: string;
     techSkills: {

@@ -4,6 +4,7 @@ import {
     SafetyCertificateOutlined
 } from '@ant-design/icons';
 import styles from './styles.module.css';
+import { formatDate } from "@modules/shared/utils/date";
 
 const Certification: React.FC<ICertification> = ({
     imageLink,
@@ -13,12 +14,6 @@ const Certification: React.FC<ICertification> = ({
     expireDate,
     credentialUrl
 }) => {
-    if (issueDate) {
-        issueDate = new Date(issueDate);
-    }
-    if (expireDate) {
-        expireDate = new Date(expireDate);
-    }
     return (
         <div className={styles.container}>
             <div>
@@ -27,8 +22,8 @@ const Certification: React.FC<ICertification> = ({
             <div>
                 <h2><span>{name}</span></h2>
                 <p>{issueDate ? "Issue by" : "Organization"}: {organization}</p>
-                {issueDate ? <p>Issue date: {`${(issueDate.getMonth() + 1).toString().padStart(2, '0')}/${issueDate.getFullYear()}`}</p> : null}
-                {expireDate ? <p>Expiration Date: {`${(expireDate.getMonth() + 1).toString().padStart(2, '0')}/${expireDate.getFullYear()}`}</p> : null}
+                {issueDate ? <p>Issue date: {formatDate(issueDate)}</p> : null}
+                {expireDate ? <p>Expiration Date: {formatDate(expireDate)}</p> : null}
                 {credentialUrl ? <Button shape="round" icon={<SafetyCertificateOutlined/>} href={credentialUrl} target="_blank">
                     Check my badge
                 </Button> : null}
