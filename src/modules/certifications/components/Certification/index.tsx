@@ -16,9 +16,7 @@ const Certification: React.FC<ICertification> = ({
 }) => {
     return (
         <div className={styles.container}>
-            <div>
-                <Image src={imageLink} preview={false} width={200} alt={name}/>
-            </div>
+            <Image src={imageLink} preview={false} alt={name}/>
             <div>
                 <h2><span>{name}</span></h2>
                 <p>{issueDate ? "Issue by" : "Organization"}: {organization}</p>

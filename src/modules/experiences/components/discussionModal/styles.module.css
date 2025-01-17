@@ -1,3 +1,9 @@
+.modalContainer {
+    width: 70% !important;
+}
+
 .modalContainer span, .modalContainer p {
     color: black;
+
+    align-self: start;
 }

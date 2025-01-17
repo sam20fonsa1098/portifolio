@@ -9,3 +9,23 @@
     
     text-align: justify;
 }
+
+@media (width <= 1250px) {
+    .container {
+        margin: 5rem;
+        width: 70%;
+    }
+}
+
+@media (width <= 800px) {
+    .container {
+        margin: 2rem;
+        width: 90%;
+    }
+}
+
+@media (width <= 650px) {
+    .container {
+        margin: 1rem;
+    }
+}

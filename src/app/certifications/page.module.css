@@ -2,11 +2,45 @@
     margin: 10rem;
 }
 
-.mainContainer h1 {
-    margin: 4rem 0;
-}
-
 .mainContainer section {
     display: flex;
     flex-direction: row;
+
+    margin: 2rem 0;
+}
+
+.mainContainer img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+@media (width <= 1250px) {
+    .mainContainer {
+        margin: 5rem;
+
+        padding-bottom: 2rem;
+    }
+}
+
+@media (width <= 800px) {
+    .mainContainer {
+        margin: 2rem;
+
+        padding-bottom: 3rem;
+    }
+}
+
+@media (width <= 650px) {
+    .mainContainer {
+        margin: 1rem;
+        padding-bottom: 4rem;
+    }
+    .mainContainer img {
+        width: 0 !important;
+        height: 0 !important;
+    }
+    
+    .mainContainer div {
+        margin: 0;
+    }
 }

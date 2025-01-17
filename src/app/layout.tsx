@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Samuel Cristo da Fonseca - Full Stack Software Developer Portfolio",
+  title: "Samuel Cristo da Fonseca - Full Stack Developer Portfolio",
   description: "Explore my professional portfolio showcasing innovative projects, technical expertise, and accomplishments in software development, cloud optimization, and system migration.",
 };
 

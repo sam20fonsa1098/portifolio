@@ -24,7 +24,6 @@ const DiscussionModal: React.FC<IDiscussionModal> = ({
             open={modalOpen}
             onOk={() => setModalOpen(false)}
             onCancel={() => setModalOpen(false)}
-            closeIcon={null}
             footer={null}
         >
             {children}

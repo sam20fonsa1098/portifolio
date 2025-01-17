@@ -74,15 +74,13 @@ export default async function Home() {
         <h2><span>SOFT SKILLS</span></h2>
 
         <div>
-          <div>
-            {aboutMe?.softSkills.map(softSkill => {
-              return (
-                <div key={softSkill} className={styles.softSkillContainer}>
-                  <p>{softSkill}</p>
-                </div>
-              );
-            })}
-          </div>
+          {aboutMe?.softSkills.map(softSkill => {
+            return (
+              <div key={softSkill} className={styles.softSkillContainer}>
+                <p>{softSkill}</p>
+              </div>
+            );
+          })}
         </div>
       </section>
 

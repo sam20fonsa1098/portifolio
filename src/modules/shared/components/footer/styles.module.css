@@ -23,7 +23,16 @@
     text-align: center;
 }
 
-.footer section a {
+.footer div a {
     margin: 0 0.5rem;
 }
 
+@media (width <= 800px) {
+    .footer section {
+        display: none;
+    }
+
+    .footer {
+        justify-content: center;
+    }
+}

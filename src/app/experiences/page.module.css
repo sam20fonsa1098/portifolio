@@ -4,4 +4,23 @@
 
 .container div {
     margin: 2rem 0;
+    padding-bottom: 1rem;
+}
+
+@media (width <= 1250px) {
+    .container {
+        margin: 5rem;
+    }
+}
+
+@media (width <= 800px) {
+    .container {
+        margin: 2rem;
+    }
+}
+
+@media (width <= 650px) {
+    .container {
+        margin: 1rem;
+    }
 }
