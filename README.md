@@ -1,7 +1,6 @@
 # My Portfolio 💻
 
 [![Live Project](https://img.shields.io/badge/Live%20Project-Click%20Here-green)](https://portifolio-sam20fonsa1098s-projects.vercel.app/)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Welcome to the repository for my personal portfolio! This project showcases my skills, experience, and the projects I've worked on throughout my career as a developer. 🚀
 
@@ -63,12 +62,6 @@ If you'd like to run this project locally, follow these steps:
    ```
    http://localhost:3000
    ```
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).  
 
 ---
 
