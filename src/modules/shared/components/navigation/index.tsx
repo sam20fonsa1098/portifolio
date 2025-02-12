@@ -63,9 +63,9 @@ const items: MenuItem[] = [
     key: 'resume',
     icon: <IdcardOutlined />,
     label: (
-      <a href={`${process.env.SERVER_URL}/files/resume.pdf`} target="_blank">
+      <Link href={`${process.env.SERVER_URL}/files/resume.pdf`} target="_blank">
         Resume
-      </a>
+      </Link>
     ),
   },
 ];
@@ -76,6 +76,6 @@ export function Navigation() {
   const activeKey = pathname === "/" ? "home" : pathname.replace("/", "");
 
   return (
-    <Menu mode="horizontal" items={items} className={styles.navigation} activeKey={activeKey}/>
+    <Menu mode="horizontal" items={items} className={styles.navigation} selectedKeys={[activeKey]}/>
   );
 }
