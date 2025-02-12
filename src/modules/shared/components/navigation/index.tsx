@@ -1,4 +1,7 @@
+"use client";
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import {
   ProjectOutlined,
   SafetyCertificateOutlined, 
@@ -9,6 +12,7 @@ import {
 } from '@ant-design/icons';
 import { Menu, MenuProps } from 'antd';
 import styles from './styles.module.css';
+import { useMemo } from 'react';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -68,7 +72,11 @@ const items: MenuItem[] = [
 ];
 
 export function Navigation() {
+  const pathname = usePathname();
+
+  const activeKey = pathname === "/" ? "home" : pathname.replace("/", "");
+
   return (
-    <Menu mode="horizontal" items={items} className={styles.navigation}/>
+    <Menu mode="horizontal" items={items} className={styles.navigation} activeKey={activeKey}/>
   );
 }
