@@ -63,7 +63,7 @@ const items: MenuItem[] = [
     key: 'resume',
     icon: <IdcardOutlined />,
     label: (
-      <Link href={`${process.env.SERVER_URL}/files/resume.pdf`} target="_blank">
+      <Link href="files/resume.pdf" target="_blank">
         Resume
       </Link>
     ),
