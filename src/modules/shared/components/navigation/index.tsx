@@ -12,7 +12,6 @@ import {
 } from '@ant-design/icons';
 import { Menu, MenuProps } from 'antd';
 import styles from './styles.module.css';
-import { useMemo } from 'react';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
