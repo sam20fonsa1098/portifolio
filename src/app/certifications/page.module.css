@@ -4,14 +4,14 @@
 
 .mainContainer section {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
     margin: 2rem 0;
 }
 
 .mainContainer img {
-    max-width: 300px;
-    max-height: 300px;
+    width: 150px !important;
+    height: 150px !important;
 }
 
 @media (width <= 1250px) {
@@ -33,7 +33,6 @@
 @media (width <= 650px) {
     .mainContainer {
         margin: 1rem;
-        padding-bottom: 4rem;
     }
     .mainContainer img {
         width: 0 !important;
@@ -41,6 +40,6 @@
     }
     
     .mainContainer div {
-        margin: 0;
+        margin: 1rem 0;
     }
 }
